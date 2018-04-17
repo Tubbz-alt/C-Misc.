@@ -9,7 +9,7 @@
 int main()
 {
 
-//------Define infile, outfile, file length. Define string to read.------//
+//------Define infile, outfile, file length. Define string to be read.------//
   FILE *infile, *outfile;
   char *string = NULL;
   size_t len = 0;
@@ -19,7 +19,7 @@ int main()
   int md5;
   unsigned char result[MD5_DIGEST_LENGTH];
   //
-  
+
   infile = fopen("file.txt", "r");
   if (infile == NULL)
     exit(EXIT_FAILURE);
