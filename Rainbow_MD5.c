@@ -15,11 +15,17 @@ int main()
   size_t len = 0;
   ssize_t read;
 //------Open File stream for read(r) and write (w). Error Handling.------//
+  //Part of MD5 Hash Function (Take out of While Loop for Optimization)
+  int md5;
+  unsigned char result[MD5_DIGEST_LENGTH];
+  //
+  
   infile = fopen("file.txt", "r");
   if (infile == NULL)
     exit(EXIT_FAILURE);
 
-  outfile = fopen("MD.txt","w");
+  outfile = fopen("MD.txt","w"); // (faster)
+  //outfile = fopen("MD.txt","a"); (slower)
   if (outfile == NULL)
     exit(EXIT_FAILURE);
 //-------------Read line-by-line in using a while loop.------------------//
@@ -31,8 +37,7 @@ int main()
      string[strcspn(string, "\n")] = 0; // Remove newline '\n'
 
 //-------------------------MD5 Hash Function---------------------------//
-      int md5;
-      unsigned char result[MD5_DIGEST_LENGTH];
+
 
       MD5(string, strlen(string), result);
 
