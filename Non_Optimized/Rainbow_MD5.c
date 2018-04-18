@@ -15,7 +15,7 @@ int main()
   size_t len = 0;
   ssize_t read;
 //------Open File stream for read(r) and write (w). Error Handling.------//
-  //Part of MD5 Hash Function (Take out of While Loop for Optimization)
+  //Part of MD5 Hash Function (Taken out of While Loop for Optimization)
   int md5;
   unsigned char result[MD5_DIGEST_LENGTH];
   //
