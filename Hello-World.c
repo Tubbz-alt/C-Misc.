@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
   /* My Second Program in C */
   printf("Hello World!\n");
 
